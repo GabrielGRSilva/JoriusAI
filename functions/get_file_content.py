@@ -6,10 +6,7 @@ def get_file_content(working_directory, file_path):
 
     abs_path_file = os.path.abspath(file_path)
     abs_path_working_directory = os.path.abspath(working_directory)
-
-    print(f'Working directory: {abs_path_working_directory}')
-    print(f'File path: {abs_path_file}')
-
+    
     #Security check to prevent agent acessing files outside the working directory:
 
     if not (abs_path_file.startswith(abs_path_working_directory + os.sep) or abs_path_file == abs_path_working_directory): 
